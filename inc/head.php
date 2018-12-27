@@ -179,10 +179,18 @@
 
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Concert+One|Roboto:400,400i,700" rel="stylesheet">
+	
 	<!-- Icons -->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<!-- Stylesheet -->
-	<?php require __DIR__ . '/../style.php'; ?>
+	
+	<!-- MDL -->
+	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+	<link rel="stylesheet" href="/plugins/mdl/mdl-custom.css">
+	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+	<!-- BFS Stylesheets -->
+	<?php //require __DIR__ . '/../style.php'; ?>
+
 	<!-- jQuery 3 -->
 	<script type="text/javascript" src="plugins/jquery/jquery-3.0.0.min.js<?php echo $ver ?>"></script>
 	<!-- Slick Carousel -->

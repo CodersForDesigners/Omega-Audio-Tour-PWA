@@ -1,0 +1,52 @@
+/*
+ *	MDL Custom
+ */
+
+/* -- Card -- */
+
+.playlist .clip-card {
+	width: 100%;
+}
+
+.playlist .clip-card .card-title {
+  color: #fff;
+  height: 176px;
+  background: url('https://getmdl.io/assets/demos/welcome_card.jpg') center / cover;
+}
+
+.playlist .clip-card .mdl-card__menu {
+  color: #fff;
+}
+
+.playlist .clip-card .playback-button {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 8px;
+}
+
+
+
+/* -- Subhead -- */
+.playlist-subhead {}
+
+.playlist-subhead .playlist-meta {
+	display: flex;
+	align-items: center;
+	padding-left: 8px;
+}
+
+.playlist-subhead .playlist-meta * {
+	margin-right: 8px; 
+}
+
+.playlist-subhead .playlist-meta i.material-icons {
+	opacity: 0.5;
+}
+
+
+@media screen and (max-width: 1024px) {
+	.playlist-subhead .playlist-meta {
+		padding-left: 0px;
+	}
+}
