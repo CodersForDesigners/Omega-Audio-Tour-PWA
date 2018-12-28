@@ -2,6 +2,31 @@
  *	MDL Custom
  */
 
+
+
+
+/* -- App Layout -- */
+
+.app-layout {
+  background: url('/media/architecture-2.jpg') center / cover;
+}
+
+.app-header {
+  background-color: rgba(0,0,0,.6);
+}
+
+.app-header .mdl-layout__drawer-button {
+	background-color: transparent;
+}
+
+.app-footer {
+	position: relative;
+	z-index: 1;
+}
+
+
+
+
 /* -- Card -- */
 
 .playlist .clip-card {
@@ -11,7 +36,18 @@
 .playlist .clip-card .card-title {
   color: #fff;
   height: 176px;
-  background: url('https://getmdl.io/assets/demos/welcome_card.jpg') center / cover;
+  background: url('/media/architecture-1.jpg') center / cover;
+}
+
+.playlist .clip-card .card-title .playlist-index {
+	display: inline-block;
+	width: 32px;
+	height: auto;
+	font-size: 16px;
+	line-height: 32px;
+	text-align: center;
+	border-radius: 50%;
+	background-color: rgba(63,81,181,1);
 }
 
 .playlist .clip-card .mdl-card__menu {
@@ -27,26 +63,95 @@
 
 
 
+
 /* -- Subhead -- */
-.playlist-subhead {}
+.playlist-subhead {
+	color: #FFF;
+	background-color: rgba(0,0,0,.3);
+}
 
 .playlist-subhead .playlist-meta {
-	display: flex;
-	align-items: center;
 	padding-left: 8px;
 }
 
-.playlist-subhead .playlist-meta * {
-	margin-right: 8px; 
+.playlist-subhead .playlist-meta small {
+	padding: 0 8px;
+	display: inline-block;
+	background-color: rgba(63,81,181,.75);
+	border-radius: 3px;
+	white-space: pre-wrap;
+	margin-right: 8px;
+	line-height: 24px;
 }
-
-.playlist-subhead .playlist-meta i.material-icons {
-	opacity: 0.5;
-}
-
 
 @media screen and (max-width: 1024px) {
 	.playlist-subhead .playlist-meta {
 		padding-left: 0px;
+	}
+}
+
+
+
+
+/* -- Footer -- */
+.playlist-footer {
+	background-color: rgba(255,255,255,1);
+	box-shadow: 0 -2px 2px 0 rgba(0,0,0,.14), 
+				0 -3px 1px -2px rgba(0,0,0,.2), 
+				0 -1px 5px 0 rgba(0,0,0,.12);
+}
+
+.playlist-footer .playlist-status {
+	padding-left: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.playlist-footer .playlist-status .status-text {
+	display: inline-block;
+	margin-left: 8px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.playlist-footer .playlist-autoplay {
+	padding-right: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.playlist-footer .playlist-autoplay label.mdl-switch {
+	margin-left: 8px;
+	width: auto;
+}
+
+@media screen and (max-width: 1024px) {
+	.playlist-footer .playlist-autoplay {
+		padding-right: 8px;
+	}
+}
+
+
+
+/* -- Navigation -- */
+.playlist-navigation {}
+
+.playlist-navigation .title {
+	height: 120px;
+	background: url('/media/architecture-2.jpg') center / cover;
+}
+.playlist-navigation .subtitle {
+	padding: 8px 40px;
+}
+
+@media screen and (max-width: 1024px) {
+	.playlist-navigation .title {
+		height: 112px;
+	}
+	.playlist-navigation .subtitle {
+		padding: 8px 16px;
 	}
 }

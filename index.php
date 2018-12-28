@@ -48,11 +48,11 @@
 
 
 <!-- Always shows a header, even in smaller screens. -->
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-	<header class="mdl-layout__header">
+<div class="app-layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
+	<header class="app-header mdl-layout__header">
 		<div class="mdl-layout__header-row">
 			<!-- Title -->
-			<span class="mdl-layout-title">Klassik Landmark</span>
+			<span class="mdl-layout-title">Island 3BHK</span>
 			<!-- Add spacer, to align navigation to the right -->
 			<div class="mdl-layout-spacer"></div>
 			<!-- Right aligned menu below button -->
@@ -67,39 +67,51 @@
 			</ul>
 		</div>
 	</header>
-	<div class="mdl-layout__drawer">
-		<span class="mdl-layout-title">Title</span>
+	<div class="playlist-navigation mdl-layout__drawer">
+		<span class="title mdl-layout-title mdl-color--indigo-500 mdl-color-text--white">Audio Tour</span>
 		<nav class="mdl-navigation">
-			<a class="mdl-navigation__link" href="">Link</a>
-			<a class="mdl-navigation__link" href="">Link</a>
-			<a class="mdl-navigation__link" href="">Link</a>
-			<a class="mdl-navigation__link" href="">Link</a>
+			<div class="subtitle mdl-color--grey-200">
+				<small>Building Tour</small>
+			</div>
+			<a class="mdl-navigation__link" href="">
+				<!-- <i class="material-icons">lens</i> -->
+				<strong class="mdl-color-text--indigo-500">Klassik Landmark</strong>
+			</a>
+			<div class="subtitle mdl-color--grey-200">
+				<small>Apartment Tour</small>
+			</div>
+			<a class="mdl-navigation__link" href="">
+				<strong class="mdl-color-text--indigo-500">Island 3BHK</strong><br>
+				<small>2035 SQFT | West Facing</small>
+			</a>
+			<a class="mdl-navigation__link" href="">
+				<strong class="mdl-color-text--indigo-500">Plush 3BHK</strong><br>
+				<small>2035 SQFT | East Facing</small>
+			</a>
+			<a class="mdl-navigation__link" href="">
+				<strong class="mdl-color-text--indigo-500">Elevate 3BHK</strong><br>
+				<small>2035 SQFT | West Facing</small>
+			</a>
 		</nav>
 	</div>
 	<main class="mdl-layout__content">
 		<!-- Your content goes here -->
 		<div class="page-content">
-			<div class="mdl-grid playlist-subhead mdl-color--indigo-400">
-				<div class="mdl-cell mdl-cell--12-col">
-					<label class="playlist-meta mdl-color-text--white">
-						<i class="material-icons">label</i>
-						<span>2035 SQFT</span>
-						<i class="material-icons">label_important</i>
-						<span>West Facing</span>
-						<i class="material-icons">label_important</i>
-						<span>B - 13A</span>
-					</label>
+			<div class="mdl-grid playlist-subhead">
+				<div class="playlist-meta mdl-cell mdl-cell--12-col">
+					<small class="mdl-color-text--white">2035 SQFT</small>
+					<small class="mdl-color-text--white">West Facing</small>
+					<small class="mdl-color-text--white">B - 13A</small>
 				</div>
 			</div>		
 			<div class="mdl-grid playlist">
 				<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
 					<div class="clip-card mdl-card mdl-shadow--2dp">
 						<div class="card-title mdl-card__title">
-							<h2 class="mdl-card__title-text">Welcome</h2>
+							<h4 class="playlist-index mdl-card__title-text">1</h4>
 						</div>
 						<div class="mdl-card__supporting-text">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							Mauris sagittis pellentesque lacus eleifend lacinia...
+							Super Retina. The beauty of OLED. On a whole new scale.
 						</div>
 						<!-- Simple MDL Progress Bar -->
 						<div id="p1" class="mdl-progress mdl-js-progress"></div>
@@ -119,11 +131,10 @@
 				<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
 					<div class="clip-card mdl-card mdl-shadow--2dp">
 						<div class="card-title mdl-card__title">
-							<h2 class="mdl-card__title-text">Welcome</h2>
+							<h4 class="playlist-index mdl-card__title-text">2</h4>
 						</div>
 						<div class="mdl-card__supporting-text">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							Mauris sagittis pellentesque lacus eleifend lacinia...
+							A new level of water resistance.
 						</div>
 						<!-- Simple MDL Progress Bar -->
 						<div id="p2" class="mdl-progress mdl-js-progress"></div>
@@ -143,11 +154,10 @@
 				<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
 					<div class="clip-card mdl-card mdl-shadow--2dp">
 						<div class="card-title mdl-card__title">
-							<h2 class="mdl-card__title-text">Welcome</h2>
+							<h4 class="playlist-index mdl-card__title-text">3</h4>
 						</div>
 						<div class="mdl-card__supporting-text">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							Mauris sagittis pellentesque lacus eleifend lacinia...
+							Face ID. Your face is your password.
 						</div>
 						<!-- Simple MDL Progress Bar -->
 						<div id="p3" class="mdl-progress mdl-js-progress"></div>
@@ -167,11 +177,10 @@
 				<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
 					<div class="clip-card mdl-card mdl-shadow--2dp">
 						<div class="card-title mdl-card__title">
-							<h2 class="mdl-card__title-text">Welcome</h2>
+							<h4 class="playlist-index mdl-card__title-text">4</h4>
 						</div>
 						<div class="mdl-card__supporting-text">
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							Mauris sagittis pellentesque lacus eleifend lacinia...
 						</div>
 						<!-- Simple MDL Progress Bar -->
 						<div id="p4" class="mdl-progress mdl-js-progress"></div>
@@ -191,11 +200,10 @@
 				<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
 					<div class="clip-card mdl-card mdl-shadow--2dp">
 						<div class="card-title mdl-card__title">
-							<h2 class="mdl-card__title-text">Welcome</h2>
+							<h4 class="playlist-index mdl-card__title-text">5</h4>
 						</div>
 						<div class="mdl-card__supporting-text">
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							Mauris sagittis pellentesque lacus eleifend lacinia...
 						</div>
 						<!-- Simple MDL Progress Bar -->
 						<div id="p5" class="mdl-progress mdl-js-progress"></div>
@@ -215,11 +223,10 @@
 				<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
 					<div class="clip-card mdl-card mdl-shadow--2dp">
 						<div class="card-title mdl-card__title">
-							<h2 class="mdl-card__title-text">Welcome</h2>
+							<h4 class="playlist-index mdl-card__title-text">6</h4>
 						</div>
 						<div class="mdl-card__supporting-text">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							Mauris sagittis pellentesque lacus eleifend lacinia...
+							<div class="description">A12 Bionic. The smartest, most powerful chip in a smartphone.</div>
 						</div>
 						<!-- Simple MDL Progress Bar -->
 						<div id="p6" class="mdl-progress mdl-js-progress"></div>
@@ -239,6 +246,21 @@
 			</div>
 		</div>
 	</main>
+	<footer class="app-footer">
+		<div class="mdl-grid playlist-footer">
+			<div class="playlist-status mdl-cell mdl-cell--10-col mdl-cell--6-col-tablet mdl-cell--3-col-phone mdl-color-text--indigo-500">
+				<i class="material-icons">volume_up</i>
+				<span class="status-text"><strong>Now Playing</strong> (2) A new level of water resistance.</span>
+			</div>
+			<div class="playlist-autoplay mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+				<strong>Autoplay</strong>
+				<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
+				  <input type="checkbox" id="switch-1" class="mdl-switch__input" checked>
+				  <span class="mdl-switch__label"></span>
+				</label>
+			</div>
+		</div>	
+	</footer>
 </div>
 
 
