@@ -12,7 +12,7 @@
 }
 
 .app-header {
-  background-color: rgba(0,0,0,.6);
+  /*background-color: rgba(0,0,0,.6);*/
 }
 
 .app-header .mdl-layout__drawer-button {
@@ -34,9 +34,12 @@
 }
 
 .playlist .clip-card .card-title {
-  color: #fff;
-  height: 176px;
-  background: url('/media/architecture-1.jpg') center / cover;
+	height: 176px;
+	color: #fff;
+	background-image: url('/media/architecture-1.jpg');
+	background-size: cover;
+  	background-repeat: no-repeat;
+  	background-position: center center;
 }
 
 .playlist .clip-card .card-title .playlist-index {
@@ -68,10 +71,12 @@
 .playlist-subhead {
 	color: #FFF;
 	background-color: rgba(0,0,0,.3);
+	overflow-x: auto;
 }
 
 .playlist-subhead .playlist-meta {
 	padding-left: 8px;
+	white-space: nowrap;
 }
 
 .playlist-subhead .playlist-meta small {

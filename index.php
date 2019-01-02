@@ -107,7 +107,7 @@
 			<div class="mdl-grid playlist">
 				<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
 					<div class="clip-card mdl-card mdl-shadow--2dp">
-						<div class="card-title mdl-card__title">
+						<div class="card-title mdl-card__title" style="background-image: url('/media/tour/1.png');">
 							<h4 class="playlist-index mdl-card__title-text">1</h4>
 						</div>
 						<div class="mdl-card__supporting-text">
@@ -130,7 +130,7 @@
 				</div>
 				<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
 					<div class="clip-card mdl-card mdl-shadow--2dp">
-						<div class="card-title mdl-card__title">
+						<div class="card-title mdl-card__title" style="background-image: url('/media/tour/2.png');">
 							<h4 class="playlist-index mdl-card__title-text">2</h4>
 						</div>
 						<div class="mdl-card__supporting-text">
@@ -153,7 +153,7 @@
 				</div>
 				<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
 					<div class="clip-card mdl-card mdl-shadow--2dp">
-						<div class="card-title mdl-card__title">
+						<div class="card-title mdl-card__title" style="background-image: url('/media/tour/3.png');">
 							<h4 class="playlist-index mdl-card__title-text">3</h4>
 						</div>
 						<div class="mdl-card__supporting-text">
@@ -176,7 +176,7 @@
 				</div>
 				<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
 					<div class="clip-card mdl-card mdl-shadow--2dp">
-						<div class="card-title mdl-card__title">
+						<div class="card-title mdl-card__title" style="background-image: url('/media/tour/4.png');">
 							<h4 class="playlist-index mdl-card__title-text">4</h4>
 						</div>
 						<div class="mdl-card__supporting-text">
