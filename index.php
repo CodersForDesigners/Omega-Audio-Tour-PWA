@@ -103,143 +103,119 @@
 					<small class="mdl-color-text--white">West Facing</small>
 					<small class="mdl-color-text--white">B - 13A</small>
 				</div>
-			</div>		
+			</div>
 			<div class="mdl-grid playlist">
-				<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+				<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone js_card">
 					<div class="clip-card mdl-card mdl-shadow--2dp">
 						<div class="card-title mdl-card__title" style="background-image: url('/media/tour/1.png');">
 							<h4 class="playlist-index mdl-card__title-text">1</h4>
 						</div>
 						<div class="mdl-card__supporting-text">
-							Super Retina. The beauty of OLED. On a whole new scale.
+							<div class="description js_card_label">Super Retina. The beauty of OLED. On a whole new scale.</div>
 						</div>
 						<!-- Simple MDL Progress Bar -->
-						<div id="p1" class="mdl-progress mdl-js-progress"></div>
-						<script>
-						  document.querySelector('#p1').addEventListener('mdl-componentupgraded', function() {
-						    this.MaterialProgress.setProgress(99);
-						  });
-						</script>
+						<div class="mdl-progress mdl-js-progress js_card_progress"></div>
 						<div class="mdl-card__actions mdl-card--border">
-							<a class="playback-button mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-								<span>Replay</span>
-								<i class="material-icons">replay</i>
-							</a>
+							<audio class="js_audio hidden" src="/media/tour-audio/1.mp3"></audio>
+							<button class="playback-button mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect js_media_toggle">
+								<span class="js_media_action_label">Listen</span>
+								<i class="material-icons js_media_action_icon">play_arrow</i>
+							</button>
 						</div>
 					</div>
 				</div>
-				<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+				<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone js_card">
 					<div class="clip-card mdl-card mdl-shadow--2dp">
 						<div class="card-title mdl-card__title" style="background-image: url('/media/tour/2.png');">
 							<h4 class="playlist-index mdl-card__title-text">2</h4>
 						</div>
 						<div class="mdl-card__supporting-text">
-							A new level of water resistance.
+							<div class="description js_card_label">A new level of water resistance.</div>
 						</div>
 						<!-- Simple MDL Progress Bar -->
-						<div id="p2" class="mdl-progress mdl-js-progress"></div>
-						<script>
-						  document.querySelector('#p2').addEventListener('mdl-componentupgraded', function() {
-						    this.MaterialProgress.setProgress(44);
-						  });
-						</script>
+						<div class="mdl-progress mdl-js-progress js_card_progress"></div>
 						<div class="mdl-card__actions mdl-card--border">
-							<a class="playback-button mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-								<span>Pause</span>
-								<i class="material-icons">pause</i>
-							</a>
+							<audio class="js_audio hidden" src="/media/tour-audio/2.mp3"></audio>
+							<button class="playback-button mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect js_media_toggle">
+								<span class="js_media_action_label">Listen</span>
+								<i class="material-icons js_media_action_icon">play_arrow</i>
+							</button>
 						</div>
 					</div>
 				</div>
-				<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+				<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone js_card">
 					<div class="clip-card mdl-card mdl-shadow--2dp">
 						<div class="card-title mdl-card__title" style="background-image: url('/media/tour/3.png');">
 							<h4 class="playlist-index mdl-card__title-text">3</h4>
 						</div>
 						<div class="mdl-card__supporting-text">
-							Face ID. Your face is your password.
+							<div class="description js_card_label">Face ID. Your face is your password.</div>
 						</div>
 						<!-- Simple MDL Progress Bar -->
-						<div id="p3" class="mdl-progress mdl-js-progress"></div>
-						<script>
-						  document.querySelector('#p3').addEventListener('mdl-componentupgraded', function() {
-						    this.MaterialProgress.setProgress(1);
-						  });
-						</script>
+						<div class="mdl-progress mdl-js-progress js_card_progress"></div>
 						<div class="mdl-card__actions mdl-card--border">
-							<a class="playback-button mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-								<span>Listen</span>
-								<i class="material-icons">play_arrow</i>
-							</a>
+							<audio class="js_audio hidden" src="/media/tour-audio/3.mp3"></audio>
+							<button class="playback-button mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect js_media_toggle">
+								<span class="js_media_action_label">Listen</span>
+								<i class="material-icons js_media_action_icon">play_arrow</i>
+							</button>
 						</div>
 					</div>
 				</div>
-				<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+				<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone js_card">
 					<div class="clip-card mdl-card mdl-shadow--2dp">
 						<div class="card-title mdl-card__title" style="background-image: url('/media/tour/4.png');">
 							<h4 class="playlist-index mdl-card__title-text">4</h4>
 						</div>
 						<div class="mdl-card__supporting-text">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							<div class="description js_card_label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
 						</div>
 						<!-- Simple MDL Progress Bar -->
-						<div id="p4" class="mdl-progress mdl-js-progress"></div>
-						<script>
-						  document.querySelector('#p4').addEventListener('mdl-componentupgraded', function() {
-						    this.MaterialProgress.setProgress(1);
-						  });
-						</script>
+						<div class="mdl-progress mdl-js-progress js_card_progress"></div>
 						<div class="mdl-card__actions mdl-card--border">
-							<a class="playback-button mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-								<span>Listen</span>
-								<i class="material-icons">play_arrow</i>
-							</a>
+							<audio class="js_audio hidden" src="/media/tour-audio/4.mp3"></audio>
+							<button class="playback-button mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect js_media_toggle">
+								<span class="js_media_action_label">Listen</span>
+								<i class="material-icons js_media_action_icon">play_arrow</i>
+							</button>
 						</div>
 					</div>
 				</div>
-				<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+				<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone js_card">
 					<div class="clip-card mdl-card mdl-shadow--2dp">
 						<div class="card-title mdl-card__title">
 							<h4 class="playlist-index mdl-card__title-text">5</h4>
 						</div>
 						<div class="mdl-card__supporting-text">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							<div class="description js_card_label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
 						</div>
 						<!-- Simple MDL Progress Bar -->
-						<div id="p5" class="mdl-progress mdl-js-progress"></div>
-						<script>
-						  document.querySelector('#p5').addEventListener('mdl-componentupgraded', function() {
-						    this.MaterialProgress.setProgress(1);
-						  });
-						</script>
+						<div class="mdl-progress mdl-js-progress js_card_progress"></div>
 						<div class="mdl-card__actions mdl-card--border">
-							<a class="playback-button mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-								<span>Listen</span>
-								<i class="material-icons">play_arrow</i>
-							</a>
+							<audio class="js_audio hidden" src="/media/tour-audio/1.mp3"></audio>
+							<button class="playback-button mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect js_media_toggle">
+								<span class="js_media_action_label">Listen</span>
+								<i class="material-icons js_media_action_icon">play_arrow</i>
+							</button>
 						</div>
 					</div>
 				</div>
-				<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+				<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone js_card">
 					<div class="clip-card mdl-card mdl-shadow--2dp">
 						<div class="card-title mdl-card__title">
 							<h4 class="playlist-index mdl-card__title-text">6</h4>
 						</div>
 						<div class="mdl-card__supporting-text">
-							<div class="description">A12 Bionic. The smartest, most powerful chip in a smartphone.</div>
+							<div class="description js_card_label">A12 Bionic. The smartest, most powerful chip in a smartphone.</div>
 						</div>
 						<!-- Simple MDL Progress Bar -->
-						<div id="p6" class="mdl-progress mdl-js-progress"></div>
-						<script>
-						  document.querySelector('#p6').addEventListener('mdl-componentupgraded', function() {
-						    this.MaterialProgress.setProgress(1);
-						  });
-						</script>
+						<div class="mdl-progress mdl-js-progress js_card_progress"></div>
 						<div class="mdl-card__actions mdl-card--border">
-							<a class="playback-button mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-								<span>Listen</span>
-								<i class="material-icons">play_arrow</i>
-							</a>
+							<audio class="js_audio hidden" src="/media/tour-audio/4.mp3"></audio>
+							<button class="playback-button mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect js_media_toggle">
+								<span class="js_media_action_label">Listen</span>
+								<i class="material-icons js_media_action_icon">play_arrow</i>
+							</button>
 						</div>
 					</div>
 				</div>
@@ -249,8 +225,9 @@
 	<footer class="app-footer">
 		<div class="mdl-grid playlist-footer">
 			<div class="playlist-status mdl-cell mdl-cell--10-col mdl-cell--6-col-tablet mdl-cell--3-col-phone mdl-color-text--indigo-500">
-				<i class="material-icons">volume_up</i>
-				<span class="status-text"><strong>Now Playing</strong> (2) A new level of water resistance.</span>
+				<i class="material-icons hidden">volume_up</i>
+				<span class="status-text"><strong>Now Playing</strong></span>
+				<span class="status-text js_current_card_label"></span>
 			</div>
 			<div class="playlist-autoplay mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
 				<strong>Autoplay</strong>
@@ -259,7 +236,7 @@
 				  <span class="mdl-switch__label"></span>
 				</label>
 			</div>
-		</div>	
+		</div>
 	</footer>
 </div>
 
@@ -272,6 +249,7 @@
 <!--  ☠  MARKUP ENDS HERE  ☠  -->
 
 <!-- JS Modules -->
+<script type="text/javascript" src="js/card-player.js"></script>
 <script type="text/javascript">
 
 // JAVASCRIPT GOES HERE
