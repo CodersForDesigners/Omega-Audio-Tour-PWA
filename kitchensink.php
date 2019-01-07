@@ -10,11 +10,6 @@
 	 */
 	$ver = '?v=20181126';
 
-	// get info on the request
-	$view = require "server/pageless.php";
-	$viewName = $view[ 0 ];
-	$viewPath = $view[ 1 ];
-
 	// included external php files with functions.
 	require ('inc/head.php');
 	require ('inc/lazaro.php'); /* -- Lazaro disclaimer and footer -- */
@@ -33,7 +28,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- Page Title | Page Name -->
-	<title>Page Title <?php echo ( $viewName != "404" ? " | " . $viewName : "" ) ?></title>
+	<title>Page Title</title>
 
 	<?php echo gethead(); ?>
 
@@ -68,7 +63,9 @@
 		</div>
 	</header>
 	<div class="playlist-navigation mdl-layout__drawer">
-		<span class="title mdl-layout-title mdl-color--indigo-500 mdl-color-text--white">Audio Tour</span>
+		<span class="title mdl-layout-title mdl-color--indigo-500 mdl-color-text--white">
+			<img src="/media/brand/nav-thumbnail.jpg">
+		</span>
 		<nav class="mdl-navigation">
 			<div class="subtitle mdl-color--grey-200">
 				<small>Building Tour</small>
