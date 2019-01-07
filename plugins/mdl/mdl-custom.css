@@ -2,16 +2,30 @@
  *	MDL Custom
  */
 
+/* -- Colors -- */
+.mdl-color-text--omega-500 {
+  color: rgb(45,107,252) !important; }
+
+.mdl-color--omega-500 {
+  background-color: rgb(45,107,252) !important; }
+
+
+
+
 
 
 
 /* -- App Layout -- */
 
 .app-layout {
-  background: url('/media/architecture-2.jpg') center / cover;
+  background-color: #F4F7FE;
+  background-image: url('/media/morocco.png');
+  background-repeat: repeat;
+  background-size: 400px;
 }
 
 .app-header {
+  background-color: rgb(45,107,252) !important;
   /*background-color: rgba(0,0,0,.6);*/
 }
 
@@ -24,7 +38,27 @@
 	z-index: 1;
 }
 
+/* -- Progress Bar -- */
+.app-layout .mdl-progress>.progressbar {
+    background-color: rgb(45,107,252);
+}
+.app-layout .mdl-progress>.bufferbar {
+    background-image: linear-gradient(to right,rgba(255,255,255,.7),rgba(255,255,255,.7)),linear-gradient(to right,rgb(45,107,252) ,rgb(45,107,252));
+}
 
+/* -- Button Color -- */
+.app-layout .mdl-button.mdl-button--colored {
+    color: rgb(45,107,252);
+}
+
+/* -- Switch Color -- */
+.app-layout .mdl-switch.is-checked .mdl-switch__track {
+    background: rgba(45,107,252,.5);
+}
+
+.app-layout .mdl-switch.is-checked .mdl-switch__thumb {
+    background: rgb(45,107,252);
+}
 
 
 /* -- Card -- */
@@ -50,7 +84,7 @@
 	line-height: 32px;
 	text-align: center;
 	border-radius: 50%;
-	background-color: rgba(63,81,181,1);
+	background-color: rgba(45,107,252,1);
 }
 
 .playlist .clip-card .mdl-card__menu {
@@ -71,7 +105,7 @@
 /* -- Subhead -- */
 .playlist-subhead {
 	color: #FFF;
-	background-color: rgba(0,0,0,.3);
+	background-color: rgba(45,107,252,.4);;
 	overflow-x: auto;
 }
 
@@ -83,7 +117,7 @@
 .playlist-subhead .playlist-meta small {
 	padding: 0 8px;
 	display: inline-block;
-	background-color: rgba(63,81,181,.75);
+	background-color: rgba(45,107,252,.75);
 	border-radius: 3px;
 	white-space: pre-wrap;
 	margin-right: 8px;
@@ -146,16 +180,24 @@
 .playlist-navigation {}
 
 .playlist-navigation .title {
-	height: 120px;
-	background: url('/media/architecture-2.jpg') center / cover;
+	min-height: 240px;
+	padding: 0; 
 }
+
+.playlist-navigation .title img {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
 .playlist-navigation .subtitle {
 	padding: 8px 40px;
 }
 
 @media screen and (max-width: 1024px) {
 	.playlist-navigation .title {
-		height: 112px;
+		min-height: 112px;
 	}
 	.playlist-navigation .subtitle {
 		padding: 8px 16px;

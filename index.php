@@ -68,28 +68,30 @@
 		</div>
 	</header>
 	<div class="playlist-navigation mdl-layout__drawer">
-		<span class="title mdl-layout-title mdl-color--indigo-500 mdl-color-text--white">Audio Tour</span>
+		<span class="title mdl-layout-title mdl-color--omega-500 mdl-color-text--white">
+			<img src="/media/brand/nav-thumbnail-1.jpg">
+		</span>
 		<nav class="mdl-navigation">
 			<div class="subtitle mdl-color--grey-200">
 				<small>Building Tour</small>
 			</div>
 			<a class="mdl-navigation__link" href="">
 				<!-- <i class="material-icons">lens</i> -->
-				<strong class="mdl-color-text--indigo-500">Klassik Landmark</strong>
+				<strong class="mdl-color-text--omega-500">Klassik Landmark</strong>
 			</a>
 			<div class="subtitle mdl-color--grey-200">
 				<small>Apartment Tour</small>
 			</div>
 			<a class="mdl-navigation__link" href="">
-				<strong class="mdl-color-text--indigo-500">Island 3BHK</strong><br>
+				<strong class="mdl-color-text--omega-500">Island 3BHK</strong><br>
 				<small>2035 SQFT | West Facing</small>
 			</a>
 			<a class="mdl-navigation__link" href="">
-				<strong class="mdl-color-text--indigo-500">Plush 3BHK</strong><br>
+				<strong class="mdl-color-text--omega-500">Plush 3BHK</strong><br>
 				<small>2035 SQFT | East Facing</small>
 			</a>
 			<a class="mdl-navigation__link" href="">
-				<strong class="mdl-color-text--indigo-500">Elevate 3BHK</strong><br>
+				<strong class="mdl-color-text--omega-500">Elevate 3BHK</strong><br>
 				<small>2035 SQFT | West Facing</small>
 			</a>
 		</nav>
@@ -224,7 +226,7 @@
 	</main>
 	<footer class="app-footer">
 		<div class="mdl-grid playlist-footer">
-			<div class="playlist-status mdl-cell mdl-cell--10-col mdl-cell--6-col-tablet mdl-cell--3-col-phone mdl-color-text--indigo-500">
+			<div class="playlist-status mdl-cell mdl-cell--10-col mdl-cell--6-col-tablet mdl-cell--3-col-phone mdl-color-text--omega-500">
 				<i class="material-icons hidden">volume_up</i>
 				<span class="status-text"><strong>Now Playing</strong></span>
 				<span class="status-text js_current_card_label"></span>

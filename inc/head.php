@@ -184,7 +184,7 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	
 	<!-- MDL -->
-	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.min.css">
 	<link rel="stylesheet" href="/plugins/mdl/mdl-custom.css">
 	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
