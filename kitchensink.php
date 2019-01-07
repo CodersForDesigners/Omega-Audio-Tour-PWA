@@ -118,10 +118,10 @@
 						  });
 						</script>
 						<div class="mdl-card__actions mdl-card--border">
-							<a class="playback-button mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+							<button class="playback-button mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
 								<span>Replay</span>
 								<i class="material-icons">replay</i>
-							</a>
+							</button>
 						</div>
 					</div>
 				</div>
@@ -141,10 +141,10 @@
 						  });
 						</script>
 						<div class="mdl-card__actions mdl-card--border">
-							<a class="playback-button mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+							<button class="playback-button mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
 								<span>Pause</span>
 								<i class="material-icons">pause</i>
-							</a>
+							</button>
 						</div>
 					</div>
 				</div>
@@ -164,10 +164,10 @@
 						  });
 						</script>
 						<div class="mdl-card__actions mdl-card--border">
-							<a class="playback-button mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+							<button class="playback-button mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
 								<span>Listen</span>
 								<i class="material-icons">play_arrow</i>
-							</a>
+							</button>
 						</div>
 					</div>
 				</div>
@@ -187,10 +187,10 @@
 						  });
 						</script>
 						<div class="mdl-card__actions mdl-card--border">
-							<a class="playback-button mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+							<button class="playback-button mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
 								<span>Listen</span>
 								<i class="material-icons">play_arrow</i>
-							</a>
+							</button>
 						</div>
 					</div>
 				</div>
@@ -210,10 +210,10 @@
 						  });
 						</script>
 						<div class="mdl-card__actions mdl-card--border">
-							<a class="playback-button mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+							<button class="playback-button mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
 								<span>Listen</span>
 								<i class="material-icons">play_arrow</i>
-							</a>
+							</button>
 						</div>
 					</div>
 				</div>
@@ -233,10 +233,10 @@
 						  });
 						</script>
 						<div class="mdl-card__actions mdl-card--border">
-							<a class="playback-button mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+							<button class="playback-button mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
 								<span>Listen</span>
 								<i class="material-icons">play_arrow</i>
-							</a>
+							</button>
 						</div>
 					</div>
 				</div>
