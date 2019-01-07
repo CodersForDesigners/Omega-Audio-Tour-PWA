@@ -92,7 +92,6 @@
 }
 
 .playlist .clip-card .playback-button {
-	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
