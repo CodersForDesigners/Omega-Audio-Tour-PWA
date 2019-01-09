@@ -41,17 +41,15 @@
 	<!-- Set the base URL for all relative URLs within the document -->
 	<base href="/"><!-- ( example : http://example.com/page.html ) -->
 	<!-- Links to top level resource in an hierarchical structure -->
-	<link rel="index" href="http://example.com/article/">
+	<!-- <link rel="index" href="http://example.com/article/"> -->
 	<!-- Helps prevent duplicate content issues -->
-	<link rel="canonical" href="https://example.com/">
+	<link rel="canonical" href="https://at.klassikbuild.com/">
 	<!-- Control the behavior of search engine crawling and indexing -->
 	<meta name="robots" content="index,follow"><!-- All Search Engines -->
 	<meta name="googlebot" content="index,follow"><!-- Google Specific -->
 	<!-- Verify website ownership -->
 	<meta name="google-site-verification" content="verification_token"><!-- Google Search Console -->
 	<meta name="alexaVerifyID" content="verification_token"><!-- Alexa Console -->
-	<!-- Links to an AMP HTML version of the current document -->
-	<link rel="amphtml" href="http://example.com/path/to/amp-version.html">
 
 
 
@@ -61,7 +59,6 @@
 	*
 	- -->
 	<!-- Name of web application (only should be used if the website is used as an app) -->
-	<meta name="application-name" content="Application Name">
 
 	<!-- Links to a JSON file that specifies "installation" credentials for the web applications -->
 	<link rel="manifest" href="manifest.json">
@@ -159,17 +156,8 @@
 
 	<!--
 	*
-	*	PreFetching, PreLoading, PreBrowsing
 	*
 	- -->
-	<!-- More info: https://css-tricks.com/prefetching-preloading-prebrowsing/ -->
-	<link rel="dns-prefetch" href="//example.com/">
-	<link rel="preconnect" href="https://www.example.com/">
-	<link rel="prefetch" href="https://www.example.com/">
-	<link rel="prerender" href="http://example.com/">
-	<link rel="preload" href="image.png" as="image">
-
-
 
 	<!--
 	*
