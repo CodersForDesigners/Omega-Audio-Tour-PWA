@@ -26,6 +26,9 @@ done
 # the media folder
 rm media
 ln -s ../media/${PROJECT_DIR} media
+# the data folder
+rm data
+ln -s ../data/${PROJECT_DIR} data
 # the favicon folder
 rm favicon
 ln -s ../media/${PROJECT_DIR}/favicon favicon

@@ -14,6 +14,9 @@
 	require ('inc/head.php');
 	require ('inc/lazaro.php'); /* -- Lazaro disclaimer and footer -- */
 
+	// The card data
+	$cards = json_decode( file_get_contents( __DIR__ . '/data/cards.json' ), true );
+
 ?>
 
 <!DOCTYPE html>
@@ -102,120 +105,31 @@
 				</div>
 			</div>
 			<div class="mdl-grid playlist">
-				<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone js_card">
-					<div class="clip-card mdl-card mdl-shadow--2dp">
-						<div class="card-title mdl-card__title" style="background-image: url('/media/tour/1.png');">
-							<h4 class="playlist-index mdl-card__title-text">1</h4>
-						</div>
-						<div class="mdl-card__supporting-text">
-							<div class="description js_card_label">Super Retina. The beauty of OLED. On a whole new scale.</div>
-						</div>
-						<!-- Simple MDL Progress Bar -->
-						<div class="mdl-progress mdl-js-progress js_card_progress"></div>
-						<div class="mdl-card__actions mdl-card--border">
-							<audio class="js_audio hidden" src="/media/tour-audio/1.mp3"></audio>
-							<button class="playback-button mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect js_media_toggle">
-								<span class="js_media_action_label">Listen</span>
-								<i class="material-icons js_media_action_icon">play_arrow</i>
-							</button>
-						</div>
-					</div>
-				</div>
-				<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone js_card">
-					<div class="clip-card mdl-card mdl-shadow--2dp">
-						<div class="card-title mdl-card__title" style="background-image: url('/media/tour/2.png');">
-							<h4 class="playlist-index mdl-card__title-text">2</h4>
-						</div>
-						<div class="mdl-card__supporting-text">
-							<div class="description js_card_label">A new level of water resistance.</div>
-						</div>
-						<!-- Simple MDL Progress Bar -->
-						<div class="mdl-progress mdl-js-progress js_card_progress"></div>
-						<div class="mdl-card__actions mdl-card--border">
-							<audio class="js_audio hidden" src="/media/tour-audio/2.mp3"></audio>
-							<button class="playback-button mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect js_media_toggle">
-								<span class="js_media_action_label">Listen</span>
-								<i class="material-icons js_media_action_icon">play_arrow</i>
-							</button>
+
+				<?php foreach ( $cards as $index => $card ) : ?>
+
+					<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone js_card">
+						<div class="clip-card mdl-card mdl-shadow--2dp">
+							<div class="card-title mdl-card__title" style="background-image: url( '<?php echo $card[ 'image' ] ?>' );">
+								<h4 class="playlist-index mdl-card__title-text"><?php echo $index + 1 ?></h4>
+							</div>
+							<div class="mdl-card__supporting-text">
+								<div class="description js_card_label"><?php echo $card[ 'description' ] ?></div>
+							</div>
+							<!-- Simple MDL Progress Bar -->
+							<div class="mdl-progress mdl-js-progress js_card_progress"></div>
+							<div class="mdl-card__actions mdl-card--border">
+								<audio class="js_audio hidden" src="<?php echo $card[ 'audio' ] ?>" preload="none"></audio>
+								<button class="playback-button mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect js_media_toggle">
+									<span class="js_media_action_label">Listen</span>
+									<i class="material-icons js_media_action_icon">play_arrow</i>
+								</button>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone js_card">
-					<div class="clip-card mdl-card mdl-shadow--2dp">
-						<div class="card-title mdl-card__title" style="background-image: url('/media/tour/3.png');">
-							<h4 class="playlist-index mdl-card__title-text">3</h4>
-						</div>
-						<div class="mdl-card__supporting-text">
-							<div class="description js_card_label">Face ID. Your face is your password.</div>
-						</div>
-						<!-- Simple MDL Progress Bar -->
-						<div class="mdl-progress mdl-js-progress js_card_progress"></div>
-						<div class="mdl-card__actions mdl-card--border">
-							<audio class="js_audio hidden" src="/media/tour-audio/3.mp3"></audio>
-							<button class="playback-button mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect js_media_toggle">
-								<span class="js_media_action_label">Listen</span>
-								<i class="material-icons js_media_action_icon">play_arrow</i>
-							</button>
-						</div>
-					</div>
-				</div>
-				<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone js_card">
-					<div class="clip-card mdl-card mdl-shadow--2dp">
-						<div class="card-title mdl-card__title" style="background-image: url('/media/tour/4.png');">
-							<h4 class="playlist-index mdl-card__title-text">4</h4>
-						</div>
-						<div class="mdl-card__supporting-text">
-							<div class="description js_card_label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-						</div>
-						<!-- Simple MDL Progress Bar -->
-						<div class="mdl-progress mdl-js-progress js_card_progress"></div>
-						<div class="mdl-card__actions mdl-card--border">
-							<audio class="js_audio hidden" src="/media/tour-audio/4.mp3"></audio>
-							<button class="playback-button mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect js_media_toggle">
-								<span class="js_media_action_label">Listen</span>
-								<i class="material-icons js_media_action_icon">play_arrow</i>
-							</button>
-						</div>
-					</div>
-				</div>
-				<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone js_card">
-					<div class="clip-card mdl-card mdl-shadow--2dp">
-						<div class="card-title mdl-card__title">
-							<h4 class="playlist-index mdl-card__title-text">5</h4>
-						</div>
-						<div class="mdl-card__supporting-text">
-							<div class="description js_card_label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-						</div>
-						<!-- Simple MDL Progress Bar -->
-						<div class="mdl-progress mdl-js-progress js_card_progress"></div>
-						<div class="mdl-card__actions mdl-card--border">
-							<audio class="js_audio hidden" src="/media/tour-audio/1.mp3"></audio>
-							<button class="playback-button mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect js_media_toggle">
-								<span class="js_media_action_label">Listen</span>
-								<i class="material-icons js_media_action_icon">play_arrow</i>
-							</button>
-						</div>
-					</div>
-				</div>
-				<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone js_card">
-					<div class="clip-card mdl-card mdl-shadow--2dp">
-						<div class="card-title mdl-card__title">
-							<h4 class="playlist-index mdl-card__title-text">6</h4>
-						</div>
-						<div class="mdl-card__supporting-text">
-							<div class="description js_card_label">A12 Bionic. The smartest, most powerful chip in a smartphone.</div>
-						</div>
-						<!-- Simple MDL Progress Bar -->
-						<div class="mdl-progress mdl-js-progress js_card_progress"></div>
-						<div class="mdl-card__actions mdl-card--border">
-							<audio class="js_audio hidden" src="/media/tour-audio/4.mp3"></audio>
-							<button class="playback-button mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect js_media_toggle">
-								<span class="js_media_action_label">Listen</span>
-								<i class="material-icons js_media_action_icon">play_arrow</i>
-							</button>
-						</div>
-					</div>
-				</div>
+
+				<?php endforeach; ?>
+
 			</div>
 			<div class="mdl-grid playlist-snack-test"><!-- For Demo only : This can be deleted  -->
 				<button id="demo-show-snackbar" class="mdl-button mdl-js-button mdl-button--raised" type="button">Show Snackbar</button>
