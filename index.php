@@ -169,7 +169,7 @@
 	<footer class="app-footer">
 		<div class="mdl-grid playlist-footer">
 			<div class="playlist-status mdl-cell mdl-cell--10-col mdl-cell--6-col-tablet mdl-cell--3-col-phone mdl-color-text--omega-500">
-				<i class="material-icons hidden">volume_up</i>
+				<i class="material-icons">volume_up</i>
 				<span class="status-text"><strong>Now Playing</strong></span>
 				<span class="status-text js_current_card_label"></span>
 			</div>
