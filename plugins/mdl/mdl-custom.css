@@ -80,11 +80,16 @@
 	display: inline-block;
 	width: 32px;
 	height: auto;
-	font-size: 16px;
+	font-size: 14px;
+	font-weight: 700;
 	line-height: 32px;
 	text-align: center;
-	border-radius: 50%;
-	background-color: rgba(45,107,252,1);
+	text-shadow: 1px 1px 1px rgb(45,107,252);
+	background-color: transparent;
+	background-size: 32px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url('/media/icon/index-icon.svg');
 }
 
 .playlist .clip-card .mdl-card__menu {
