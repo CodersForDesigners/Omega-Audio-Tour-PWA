@@ -61,6 +61,12 @@
 }
 
 
+/* -- Snack Bar -- */
+.app-layout .mdl-snackbar {
+	bottom: 56px;
+}
+
+
 /* -- Card -- */
 
 .playlist .clip-card {
