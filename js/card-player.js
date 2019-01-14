@@ -4,27 +4,9 @@ jQuery( function ( $ ) {
 
 
 
-function pauseCard ( $card ) {
-
-	if ( ! $card.length )
-		return;
+function playCard ( $card ) {
 
 	var $mediaToggle = $card.find( ".js_media_toggle" );
-	var $audio = $card.find( ".js_audio" );
-	var domAudio = $audio.get( 0 );
-
-	domAudio.pause();
-	$mediaToggle.find( ".js_media_action_label" ).text( "Resume" );
-	$mediaToggle.find( ".js_media_action_icon" ).text( "play_arrow" );
-	$audio.data( "state", "paused" );
-	$card.removeClass( "js_currently_playing" );
-
-}
-
-$( document ).on( "click", ".js_media_toggle", function ( event ) {
-
-	var $mediaToggle = $( event.target ).closest( ".js_media_toggle" );
-	var $card = $mediaToggle.closest( ".js_card" );
 	var $audio = $mediaToggle.parent().find( "audio" );
 	var domAudio = $audio.get( 0 );
 
@@ -50,6 +32,30 @@ $( document ).on( "click", ".js_media_toggle", function ( event ) {
 			$card.addClass( "js_currently_playing" );
 		} )
 	}
+
+}
+
+function pauseCard ( $card ) {
+
+	if ( ! $card.length )
+		return;
+
+	var $mediaToggle = $card.find( ".js_media_toggle" );
+	var $audio = $card.find( ".js_audio" );
+	var domAudio = $audio.get( 0 );
+
+	domAudio.pause();
+	$mediaToggle.find( ".js_media_action_label" ).text( "Resume" );
+	$mediaToggle.find( ".js_media_action_icon" ).text( "play_arrow" );
+	$audio.data( "state", "paused" );
+	$card.removeClass( "js_currently_playing" );
+
+}
+
+$( document ).on( "click", ".js_media_toggle", function ( event ) {
+
+	var $card = $( event.target ).closest( ".js_card" );
+	playCard( $card );
 
 } );
 
