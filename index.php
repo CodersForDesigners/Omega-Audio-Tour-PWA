@@ -202,9 +202,71 @@
 <script type="text/javascript" src="js/card-player.js"></script>
 <script type="text/javascript">
 
-// JAVASCRIPT GOES HERE
-$(document).ready(function(){
-});
+	if ( "serviceWorker" in navigator ) {
+
+		/*
+		 * Register a service worker
+		 */
+		window.addEventListener( "load", function ( event ) {
+			var serviceWorkerIsAlreadyPresent = navigator.serviceWorker.controller;
+			navigator.serviceWorker.register( "/service-worker.js", { scope: "/" } )
+				.then( function ( registration ) {
+					console.log( "Service worker registered", registration );
+					if ( serviceWorkerIsAlreadyPresent )
+						onServiceWorkerWaiting( registration, promptUserToUpdate );
+				} )
+				.then( navigator.serviceWorker.ready )
+				.then( function ( registration ) {
+					console.log( "Service worker is ready" );
+				} )
+				.catch( function ( e ) {
+					console.error( "Service worker not registered", e );
+				} )
+		} );
+
+		/*
+		 * Refresh the page when a new service worker takes up shop
+		 */
+		var pageHasBeenRefreshed;
+		navigator.serviceWorker.addEventListener( "controllerchange", function ( event ) {
+			if ( pageHasBeenRefreshed )
+				return;
+			pageHasBeenRefreshed = true;
+			window.location.reload();
+		} );
+
+	}
+
+	function promptUserToUpdate ( registration ) {
+
+		// Native browser prompt
+		var message = "A new version has been installed. Would you like to update to it?";
+		if ( window.confirm( message ) )
+			registration.waiting.postMessage( "skipWaiting" );
+
+	}
+
+	function onServiceWorkerWaiting ( registration, handler ) {
+
+		if ( ! registration )
+			return;
+
+		if ( registration.waiting )
+			handler( registration );
+
+		function handleOnInstall () {
+			registration.installing.addEventListener( "statechange", function ( event ) {
+				if ( event.target.state == "installed" )
+					handler( registration );
+			} );
+		}
+
+		if ( registration.installing )
+			handleOnInstall();
+
+		registration.addEventListener( "updatefound", handleOnInstall );
+
+	}
 
 </script>
 
