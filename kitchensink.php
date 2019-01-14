@@ -277,6 +277,9 @@
 		</div>
 	</main>
 	<footer class="app-footer">
+		<div class="playlist-playhead">
+			<input class="mdl-slider mdl-js-slider" type="range" min="0" max="100" value="25" tabindex="0">
+		</div>
 		<div class="mdl-grid playlist-footer">
 			<div class="playlist-status mdl-cell mdl-cell--10-col mdl-cell--6-col-tablet mdl-cell--3-col-phone mdl-color-text--indigo-500">
 				<i class="material-icons">volume_up</i>
