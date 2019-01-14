@@ -16,6 +16,12 @@
 
 	// The card data
 	$cards = json_decode( file_get_contents( __DIR__ . '/data/cards.json' ), true );
+	$cards = array_filter( $cards, function ( $card ) {
+		if ( empty( $card[ 'exclude' ] ) )
+			return true;
+		else
+			return ! $card[ 'exclude' ];
+	} );
 
 ?>
 
