@@ -137,39 +137,13 @@
 				<?php endforeach; ?>
 
 			</div>
-			<div class="mdl-grid playlist-snack-test"><!-- For Demo only : This can be deleted  -->
-				<button id="demo-show-snackbar" class="mdl-button mdl-js-button mdl-button--raised" type="button">Show Snackbar</button>
+
+			<!-- Notification Section -->
+			<div class="mdl-js-snackbar mdl-snackbar js_notification_section">
+				<div class="mdl-snackbar__text"></div>
+				<button class="mdl-snackbar__action" type="button"></button>
 			</div>
-			<div class="mdl-grid playlist-snack">
-				<div class="playlist-snack">
-					<div id="demo-snackbar-example" class="mdl-js-snackbar mdl-snackbar">
-					  <div class="mdl-snackbar__text"></div>
-					  <button class="mdl-snackbar__action" type="button"></button>
-					</div>
-					<script>
-					(function() {
-					  'use strict';
-					  var snackbarContainer = document.querySelector('#demo-snackbar-example');
-					  var showSnackbarButton = document.querySelector('#demo-show-snackbar');
-					  var handler = function(event) {
-					    showSnackbarButton.style.backgroundColor = '';
-					  };
-					  showSnackbarButton.addEventListener('click', function() {
-					    'use strict';
-					    showSnackbarButton.style.backgroundColor = '#' +
-					        Math.floor(Math.random() * 0xFFFFFF).toString(16);
-					    var data = {
-					      message: 'Button color changed.',
-					      timeout: 2000,
-					      actionHandler: handler,
-					      actionText: 'Undo'
-					    };
-					    snackbarContainer.MaterialSnackbar.showSnackbar(data);
-					  });
-					}());
-					</script>
-				</div>
-			</div>
+
 		</div>
 	</main>
 	<footer class="app-footer">
@@ -182,7 +156,7 @@
 			<div class="playlist-autoplay mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
 				<strong>Autoplay</strong>
 				<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
-				  <input type="checkbox" id="switch-1" class="mdl-switch__input" checked>
+				  <input type="checkbox" id="switch-1" class="mdl-switch__input js_card_autoplay" checked>
 				  <span class="mdl-switch__label"></span>
 				</label>
 			</div>
@@ -239,10 +213,16 @@
 
 	function promptUserToUpdate ( registration ) {
 
-		// Native browser prompt
-		var message = "A new version has been installed. Would you like to update to it?";
-		if ( window.confirm( message ) )
-			registration.waiting.postMessage( "skipWaiting" );
+		// Fancy snackbar approach
+		var domNotificationSection = document.getElementsByClassName( "js_notification_section" )[ 0 ];
+		domNotificationSection.MaterialSnackbar.showSnackbar( {
+			message: "A new version has been installed. Do you wish to update to it?",
+			timeout: 19000,
+			actionHandler: function () {
+				registration.waiting.postMessage( "skipWaiting" );
+			},
+			actionText: "Okay"
+		} );
 
 	}
 
