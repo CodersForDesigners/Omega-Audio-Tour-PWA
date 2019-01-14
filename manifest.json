@@ -1,0 +1,21 @@
+{
+  "name": "Omega Audio Tour",
+  "short_name": "Audio Tour",
+  "description": "A lazaro",
+  "icons": [
+    {
+      "sizes": "192x192",
+      "type": "image/png",
+      "src": "media/meta/icons/android-chrome-192x192.png"
+    },
+    {
+      "sizes": "256x256",
+      "type": "image/png",
+      "src": "media/meta/icons/android-chrome-256x256.png"
+    }
+  ],
+  "display": "standalone",
+  "background_color": "#333333",
+  "theme_color": "#333333",
+  "start_url": "/"
+}
