@@ -154,7 +154,6 @@
 		<div class="mdl-grid playlist-footer">
 			<div class="playlist-status mdl-cell mdl-cell--10-col mdl-cell--6-col-tablet mdl-cell--3-col-phone mdl-color-text--omega-500">
 				<i class="material-icons">volume_up</i>
-				<span class="status-text"><strong>Now Playing</strong></span>
 				<span class="status-text js_current_card_label"></span>
 			</div>
 			<div class="playlist-autoplay mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
