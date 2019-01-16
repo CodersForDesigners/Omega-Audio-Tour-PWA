@@ -114,7 +114,7 @@
 
 				<?php foreach ( $cards as $index => $card ) : ?>
 
-					<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone js_card">
+					<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone js_card" data-src="<?php echo $card[ 'audio' ] ?>">
 						<div class="clip-card mdl-card mdl-shadow--2dp">
 							<div class="card-title mdl-card__title" style="background-image: url( '<?php echo $card[ 'image' ] ?>' );">
 								<h4 class="playlist-index mdl-card__title-text"><?php echo $index + 1 ?></h4>
@@ -125,7 +125,6 @@
 							<!-- Simple MDL Progress Bar -->
 							<div class="mdl-progress mdl-js-progress js_card_progress"></div>
 							<div class="mdl-card__actions mdl-card--border">
-								<audio class="js_audio hidden" src="<?php echo $card[ 'audio' ] ?>" preload="none"></audio>
 								<button class="playback-button mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect js_media_toggle">
 									<span class="js_media_action_label">Listen</span>
 									<i class="material-icons js_media_action_icon">play_arrow</i>
@@ -147,6 +146,7 @@
 		</div>
 	</main>
 	<footer class="app-footer">
+		<audio class="js_audio hidden" preload="none"></audio>
 		<div class="mdl-grid playlist-footer">
 			<div class="playlist-status mdl-cell mdl-cell--10-col mdl-cell--6-col-tablet mdl-cell--3-col-phone mdl-color-text--omega-500">
 				<i class="material-icons">volume_up</i>
