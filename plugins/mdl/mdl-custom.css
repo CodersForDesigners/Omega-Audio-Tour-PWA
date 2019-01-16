@@ -149,7 +149,7 @@
 	position: relative;
 	z-index: 1;
 	background-color: rgba(255,255,255,1);
-	box-shadow: 0 -2px 2px 0 rgba(0,0,0,.14), 
+	box-shadow: 0 -2px 2px 0 rgba(0,0,0,.14),
 				0 -1px 5px 0 rgba(0,0,0,.12);
 }
 
@@ -199,6 +199,14 @@
 	transform: translateY(-50%);
 }
 
+@media ( max-width: 1040px ) {
+
+	.playlist-playhead .mdl-slider {
+		height: 4rem;
+	}
+
+}
+
 .playlist-playhead input {
 	width: 100%;
 	margin: 0;
@@ -208,6 +216,13 @@
 	width: 100%;
 	margin: 0;
 }
+.playlist-playhead .mdl-slider__background-flex {
+	height: 4px;
+	transform: translateY( -2px );
+}
+.mdl-slider.is-upgraded:disabled + .mdl-slider__background-flex > .mdl-slider__background-lower {
+	left: auto;
+}
 
 
 
@@ -216,7 +231,7 @@
 
 .playlist-navigation .title {
 	min-height: 240px;
-	padding: 0; 
+	padding: 0;
 }
 
 .playlist-navigation .title img {

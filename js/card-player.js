@@ -4,6 +4,7 @@ jQuery( function ( $ ) {
 
 
 
+var playheadIsBeingScrubbed;
 var autoplayNextCard = true;
 
 function togglePlayback ( $card ) {
@@ -46,6 +47,8 @@ function playCard ( $card ) {
 	domAudio.play().then( function () {
 		// Seek to the time where the card was last at
 		domAudio.currentTime = currentTime;
+		// Enable the playhead to be scrubbed
+		enablePlayhead();
 		// Update the label on the card to "Pause"
 		var $mediaToggle = $card.find( ".js_media_toggle" );
 		$mediaToggle.find( ".js_media_action_label" ).text( "Pause" );
@@ -83,6 +86,25 @@ function pauseCard ( $card ) {
 	// Remove the "currently playing" designation
 	$card.removeClass( "js_currently_playing" );
 
+	// Finally, disable the playhead
+	disablePlayhead();
+
+}
+
+function disablePlayhead () {
+	$( ".js_card_seek_scrubber" ).prop( "disabled", true );
+}
+
+function enablePlayhead () {
+	$( ".js_card_seek_scrubber" ).prop( "disabled", false );
+}
+
+function resetPlayhead () {
+	$( ".js_card_seek_scrubber" ).get( 0 ).MaterialSlider.change( 0 );
+}
+
+function setPlayhead ( progress ) {
+	$( ".js_card_seek_scrubber" ).get( 0 ).MaterialSlider.change( progress );
 }
 
 $( document ).on( "click", ".js_media_toggle", function ( event ) {
@@ -105,6 +127,8 @@ $( ".js_audio" ).on( "timeupdate", function ( event ) {
 
 	var progress = domAudio.currentTime / domAudio.duration * 100;
 	domCardProgress.MaterialProgress.setProgress( progress );
+	if ( ! playheadIsBeingScrubbed )
+		setPlayhead( progress );
 
 } );
 
@@ -120,6 +144,9 @@ $( ".js_audio" ).on( "ended", function ( event ) {
 	$mediaToggle.find( ".js_media_action_label" ).text( "Replay" );
 	$mediaToggle.find( ".js_media_action_icon" ).text( "replay" );
 
+	// Mark the card as "played"
+	$card.data( "played", true );
+
 	// Reset the card's current timestamp to 0
 	$card.data( "timestamp", 0 );
 
@@ -131,6 +158,58 @@ $( ".js_audio" ).on( "ended", function ( event ) {
 	}
 
 } );
+
+
+/*
+ *
+ * Card Seeking
+ *
+ */
+$( ".js_card_seek_scrubber" ).on( "click", function ( event ) {
+
+	var $range = $( event.target ).closest( ".js_card_seek_scrubber" );
+	var domRange = $range.get( 0 );
+
+	// Calculate the progress
+	var rangeOffset = event.offsetX;
+	var rangeWidth = $range.width();
+	var rangeProgress = parseInt( rangeOffset / rangeWidth * 100, 10 );
+
+	// Update the UI for the range input
+	domRange.MaterialSlider.change( rangeProgress );
+
+	// Trigger the change event for the range input
+	domRange.value = rangeProgress;
+	$range.trigger( "change" );
+
+} );
+
+$( ".js_card_seek_scrubber" ).on( "input", function ( event ) {
+	playheadIsBeingScrubbed = true;
+} );
+
+$( ".js_card_seek_scrubber" ).on( "change", function ( event ) {
+
+	playheadIsBeingScrubbed = false;
+
+	// var domAudio = $( ".js_currently_playing" ).find( ".js_audio" ).get( 0 );
+	var domAudio = $( ".js_audio" ).get( 0 );
+
+	/*
+	 * If the user has scrubbed the playhead but not let go,
+	 * 	then when the audio finishes playing, the change event gets fired
+	 * 	regardless, and the value of `domAudio` will be `undefined`.
+	 */
+	if ( ! domAudio )
+		return;
+
+	var progressPercentage = event.target.value;
+	var progress = progressPercentage / 100;
+	domAudio.currentTime = progress * domAudio.duration;
+	setPlayhead( progressPercentage );
+
+} );
+
 
 /*
  * Toggle the card autoplay

@@ -147,6 +147,10 @@
 	</main>
 	<footer class="app-footer">
 		<audio class="js_audio hidden" preload="none"></audio>
+		<div class="playlist-playhead js_playlist_playhead">
+			<!-- Default Slider -->
+			<input class="mdl-slider mdl-js-slider js_card_seek_scrubber" type="range" min="0" max="100" value="0" tabindex="0" disabled>
+		</div>
 		<div class="mdl-grid playlist-footer">
 			<div class="playlist-status mdl-cell mdl-cell--10-col mdl-cell--6-col-tablet mdl-cell--3-col-phone mdl-color-text--omega-500">
 				<i class="material-icons">volume_up</i>
