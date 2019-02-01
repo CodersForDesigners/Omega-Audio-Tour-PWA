@@ -85,7 +85,7 @@
 					<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone js_card" data-src="<?php echo $card[ 'audio' ] ?>">
 						<div class="clip-card mdl-card mdl-shadow--2dp">
 							<div class="card-title mdl-card__title" style="background-image: url( '<?php echo $card[ 'image' ] ?>' );">
-								<h4 class="playlist-index mdl-card__title-text"><?php echo $index + 1 ?></h4>
+								<h4 class="playlist-index mdl-card__title-text"><?php echo $index ?></h4>
 							</div>
 							<div class="mdl-card__supporting-text">
 								<div class="description js_card_label"><?php echo $card[ 'description' ] ?></div>
