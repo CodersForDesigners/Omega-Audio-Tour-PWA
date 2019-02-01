@@ -32,3 +32,7 @@ ln -s ../data/${PROJECT_DIR} data
 # the favicon folder
 rm favicon
 ln -s ../media/${PROJECT_DIR}/favicon favicon
+
+# Prepend the cache manifest to the service worker
+cat data/cache-manifest.js service-worker.js > _service-worker.js
+mv _service-worker.js service-worker.js
