@@ -59,16 +59,6 @@
 			<span class="mdl-layout-title">Island 3BHK</span>
 			<!-- Add spacer, to align navigation to the right -->
 			<div class="mdl-layout-spacer"></div>
-			<!-- Right aligned menu below button -->
-			<button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--icon">
-				<i class="material-icons">more_vert</i>
-			</button>
-			<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right">
-				<li class="mdl-menu__item">Some Action</li>
-				<li class="mdl-menu__item">Another Action</li>
-				<li disabled class="mdl-menu__item">Disabled Action</li>
-				<li class="mdl-menu__item">Yet Another Action</li>
-			</ul>
 		</div>
 	</header>
 	<div class="playlist-navigation mdl-layout__drawer">
@@ -83,33 +73,11 @@
 				<!-- <i class="material-icons">lens</i> -->
 				<strong class="mdl-color-text--omega-500">Klassik Landmark</strong>
 			</a>
-			<div class="subtitle mdl-color--grey-200">
-				<small>Apartment Tour</small>
-			</div>
-			<a class="mdl-navigation__link" href="">
-				<strong class="mdl-color-text--omega-500">Island 3BHK</strong><br>
-				<small>2035 SQFT | West Facing</small>
-			</a>
-			<a class="mdl-navigation__link" href="">
-				<strong class="mdl-color-text--omega-500">Plush 3BHK</strong><br>
-				<small>2035 SQFT | East Facing</small>
-			</a>
-			<a class="mdl-navigation__link" href="">
-				<strong class="mdl-color-text--omega-500">Elevate 3BHK</strong><br>
-				<small>2035 SQFT | West Facing</small>
-			</a>
 		</nav>
 	</div>
 	<main class="mdl-layout__content">
 		<!-- Your content goes here -->
 		<div class="page-content">
-			<div class="mdl-grid playlist-subhead">
-				<div class="playlist-meta mdl-cell mdl-cell--12-col">
-					<small class="mdl-color-text--white">2035 SQFT</small>
-					<small class="mdl-color-text--white">West Facing</small>
-					<small class="mdl-color-text--white">B - 13A</small>
-				</div>
-			</div>
 			<div class="mdl-grid playlist">
 
 				<?php foreach ( $cards as $index => $card ) : ?>
