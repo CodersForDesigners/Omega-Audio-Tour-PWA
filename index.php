@@ -37,7 +37,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- Page Title | Page Name -->
-	<title>Page Title</title>
+	<title>Audio Tour | Klassik Landmark</title>
 
 	<?php echo gethead(); ?>
 
@@ -56,7 +56,7 @@
 	<header class="app-header mdl-layout__header">
 		<div class="mdl-layout__header-row">
 			<!-- Title -->
-			<span class="mdl-layout-title">Island 3BHK</span>
+			<span class="mdl-layout-title">Klassik Landmark Audio Tour</span>
 			<!-- Add spacer, to align navigation to the right -->
 			<div class="mdl-layout-spacer"></div>
 		</div>
