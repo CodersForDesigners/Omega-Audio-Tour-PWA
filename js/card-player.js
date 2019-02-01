@@ -5,7 +5,7 @@ jQuery( function ( $ ) {
 
 
 var playheadIsBeingScrubbed;
-var autoplayNextCard = true;
+var autoplayNextCard = false;
 
 function togglePlayback ( $card ) {
 

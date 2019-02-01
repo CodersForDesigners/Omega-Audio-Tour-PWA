@@ -127,7 +127,7 @@
 			<div class="playlist-autoplay mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
 				<strong>Autoplay</strong>
 				<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
-				  <input type="checkbox" id="switch-1" class="mdl-switch__input js_card_autoplay" checked>
+				  <input type="checkbox" id="switch-1" class="mdl-switch__input js_card_autoplay">
 				  <span class="mdl-switch__label"></span>
 				</label>
 			</div>
