@@ -1,4 +1,17 @@
 
+/*
+ * Constants
+ */
+const GTM_HOST = "www.googletagmanager.com";
+const GOOGLE_ANALYTICS_HOST = "www.google-analytics.com";
+// All known Measurement Protocol single-hit collect endpoints
+const GOOGLE_COLLECT_PATHS_REGEX = /^\/(\w+\/)?collect/;
+	// 	Most of the time the default path (/collect) is used, but occasionally
+	// 	an experimental endpoint is used when testing new features.
+	// 	( for example, "/r/collect" or "/j/collect" )
+const routesToNotCache = [ GTM_HOST, GOOGLE_ANALYTICS_HOST ];
+
+
 self.addEventListener( "install", function ( event ) {
 	console.log( `::-:: Service worker installing: ${CACHE_ID} ::-::` );
 	event.waitUntil( installServiceWorker( event ) );
@@ -66,6 +79,12 @@ async function activateServiceWorker ( event ) {
 async function fetchHandler ( event ) {
 
 	let request = event.request;
+	let url = new URL( request.url );
+
+	// If the request is to certain blacklisted domains, we don't cache them
+	if ( routesToNotCache.includes( url.host ) )
+		return await fetch( request );
+
 	let cache = await caches.open( CACHE_ID );
 
 	let response;
