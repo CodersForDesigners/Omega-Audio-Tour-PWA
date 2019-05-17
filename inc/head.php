@@ -142,4 +142,14 @@
 	<!-- jQuery 3 -->
 	<script type="text/javascript" src="/plugins/jquery/jquery-3.0.0.min.js"></script>
 
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-43861509-2"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [ ];
+		function gtag () { dataLayer.push( arguments ); }
+	  	gtag( "js", new Date() );
+		gtag( "config", "UA-43861509-2" );
+	</script>
+	<!-- END: Global site tag -->
+
 <?php } ?>
