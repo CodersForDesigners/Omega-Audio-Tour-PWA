@@ -28,15 +28,20 @@ self.addEventListener( "fetch", function ( event ) {
 
 async function installServiceWorker ( event ) {
 
-	let routes = CACHE_MANIFEST.filter( url => ( ! url.includes( "." ) ) );
+	let pageRoutes = CACHE_MANIFEST.filter( url => ( ! url.includes( "." ) ) );
 	let otherResources = CACHE_MANIFEST.filter( url => url.includes( "." ) );
 
 	let cache = await caches.open( CACHE_ID );
+
 
 	otherResources.map( async function ( request ) {
 		let response = await caches.match( request );
 		if ( response )
 			await cache.put( request, response );
+	// Delete all the page routes
+	pageRoutes.forEach( async function ( route ) {
+		await cache.delete( route );
+	} );
 		else
 			await cache.add( request );
 	} )
