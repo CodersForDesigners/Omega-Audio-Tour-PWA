@@ -41,24 +41,42 @@ self.addEventListener( "fetch", function ( event ) {
 
 async function installServiceWorker ( event ) {
 
-	let pageRoutes = CACHE_MANIFEST.filter( url => ( ! url.includes( "." ) ) );
-	let otherResources = CACHE_MANIFEST.filter( url => url.includes( "." ) );
+	let pageRoutes = CACHE_MANIFEST.filter(
+		resource => ( ! resource.url.includes( "." ) )
+	);
+	let otherResources = CACHE_MANIFEST.filter(
+		resource => resource.url.includes( "." )
+	);
 
 	let cache = await caches.open( CACHE_ID );
 
-
-	otherResources.map( async function ( request ) {
-		let response = await caches.match( request );
-		if ( response )
-			await cache.put( request, response );
 	// Delete all the page routes
 	pageRoutes.forEach( async function ( route ) {
-		await cache.delete( route );
+		await cache.delete( route.url );
 	} );
+
+	otherResources.forEach( async function ( request ) {
+		let response = await caches.match( request.url, { ignoreSearch: true } );
+		if ( response ) {
+			let requestVersion = request.v || 0;
+			let responseVersion = parseInt(
+				new URL( response.url ).searchParams.get( "v" ), 10
+			) || 0;
+			// If the existing version of the version of the resource
+			// is less than the one being requested, then fetch again
+			if ( responseVersion < requestVersion ) {
+				let requestUrl = new URL( request.url );
+				requestUrl.set( "v", request.url );
+				await cache.add( requestUrl.href );
+			}
+			else
+				await cache.put( request.url, response );
+		}
 		else
-			await cache.add( request );
-	} )
-	await cache.addAll( routes );
+			await cache.add( request.url );
+	} );
+	// Fetch and cache all the page routes
+	await cache.addAll( pageRoutes.map( route => route.url ) );
 
 	return Promise.resolve();
 
