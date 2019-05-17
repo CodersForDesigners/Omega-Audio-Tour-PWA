@@ -68,13 +68,13 @@ async function fetchHandler ( event ) {
 	// if ( request is not cross-domain )
 		response = await cache.match( request );
 
-	if ( ! response ) {
-		response = await fetch( request );
-		// if ( response.status == 200 )
-		if ( response.ok )
-			// if ( request is not cross-domain )
-				await cache.add( request, response );
-	}
+	if ( response )
+		return response;
+
+	response = await fetch( request );
+	if ( response.ok )
+		// if ( request is not cross-domain )
+			await cache.add( request, response );
 
 	return response;
 
