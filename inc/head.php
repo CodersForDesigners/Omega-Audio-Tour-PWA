@@ -8,12 +8,10 @@
 	*
 	- -->
 	<!-- Short description of your document's subject -->
-	<meta name="subject" content="your document's subject">
+	<!-- <meta name="subject" content="your document's subject"> -->
 	<!-- Short description of the document (limit to 150 characters) -->
 	<!-- This content *may* be used as a part of search engine results. -->
-	<meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. Excepteur sint occaecat cupidatat non proident.">
-	<!-- Key Words -->
-	<meta name="keywords" content="Keyword_A, Keyword_B, Keyword_C, Keyword_D, Keyword_E">
+	<meta name="description" content="An immersive tour of Klassik Landmark as you explore the place.">
 
 
 
@@ -23,13 +21,8 @@
 	*
 	- -->
 	<!-- Links to information about the author(s) of the document -->
-	<meta name="author" content="Lazaro Advertising">
+	<meta name="author" content="Coders For Designers">
 	<link rel="author" href="humans.txt">
-
-	<!-- Provides information about an author or another person -->
-	<link rel="me" href="https://google.com/profiles/thenextweb" type="text/html">
-	<link rel="me" href="mailto:name@example.com">
-	<link rel="me" href="sms:+15035550125">
 
 
 
@@ -43,13 +36,10 @@
 	<!-- Links to top level resource in an hierarchical structure -->
 	<!-- <link rel="index" href="http://example.com/article/"> -->
 	<!-- Helps prevent duplicate content issues -->
-	<link rel="canonical" href="https://at.klassikbuild.com/">
+	<link rel="canonical" href="https://audiotour.klassikbuild.com/">
 	<!-- Control the behavior of search engine crawling and indexing -->
 	<meta name="robots" content="index,follow"><!-- All Search Engines -->
 	<meta name="googlebot" content="index,follow"><!-- Google Specific -->
-	<!-- Verify website ownership -->
-	<meta name="google-site-verification" content="verification_token"><!-- Google Search Console -->
-	<meta name="alexaVerifyID" content="verification_token"><!-- Alexa Console -->
 
 
 
@@ -67,13 +57,13 @@
 	<!-- Disable automatic detection and formatting of possible phone numbers -->
 	<meta name="format-detection" content="telephone=no">
 	<!-- Launch Screen Image -->
-	<link rel="apple-touch-startup-image" href="/path/to/launch.png">
+	<!-- <link rel="apple-touch-startup-image" href="/path/to/launch.png"> -->
 	<!-- Launch Icon Title -->
-	<meta name="apple-mobile-web-app-title" content="App Title">
+	<!-- <meta name="apple-mobile-web-app-title" content="App Title"> -->
 	<!-- Enable standalone (full-screen) mode -->
-	<meta name="apple-mobile-web-app-capable" content="yes">
+	<!-- <meta name="apple-mobile-web-app-capable" content="yes"> -->
 	<!-- Status bar appearance (has no effect unless standalone mode is enabled) -->
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<!-- <meta name="apple-mobile-web-app-status-bar-style" content="black"> -->
 
 	<!-- ~ Android ~ -->
 	<!-- Add to home screen -->
@@ -88,42 +78,12 @@
 	*
 	- -->
 	<!-- Facebook Open Graph -->
-	<meta property="fb:app_id" content="123456789">
-	<meta property="og:url" content="http://example.com/page.html">
+	<meta property="og:url" content="https://audiotour.klassikbuild.com">
 	<meta property="og:type" content="website">
-	<meta property="og:title" content="Content Title">
-	<meta property="og:image" content="http://example.com/image.jpg">
-	<meta property="og:description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. Excepteur sint occaecat cupidatat non proident.">
-	<meta property="og:site_name" content="Site Name">
-	<meta property="og:locale" content="en_US">
-	<meta property="article:author" content="">
-
-
-
-	<!-- ~ Facebook Instant Article ~ -->
-	<!-- (sample : https://developers.facebook.com/docs/instant-articles/reference) -->
-	<!-- (source : https://developers.facebook.com/docs/instant-articles/guides/articlecreate) -->
-	<meta property="op:markup_version" content="v1.0">
-	<!-- The URL of the web version of your article -->
-	<link rel="canonical" href="http://example.com/article.html">
-	<!-- The style to be used for this article -->
-	<meta property="fb:article_style" content="myarticlestyle">
-
-	<!-- Twitter Card -->
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:site" content="@site_handle">
-	<meta name="twitter:creator" content="@publisher_handle">
-	<meta name="twitter:url" content="http://example.com/page.html">
-	<meta name="twitter:title" content="Post Title">
-	<meta name="twitter:description" content="Content description less than 200 characters">
-	<meta name="twitter:image" content="http://example.com/image.jpg">
-
-	<!-- Google+ / Schema.org -->
-	<link href="https://plus.google.com/+YourPage" rel="publisher">
-	<meta itemprop="name" content="Content Title">
-	<meta itemprop="description" content="Content description less than 200 characters">
-	<meta itemprop="image" content="http://example.com/image.jpg">
-
+	<meta property="og:title" content="Audio Tour | Klassik Landmark">
+	<meta property="og:image" content="https://klassikbuild.com/landmark/media/favicon/apple-icon.png">
+	<meta property="og:description" content="An immersive tour of Klassik Landmark as you explore the place.">
+	<meta property="og:site_name" content="Klassik Landmark">
 
 
 	<!--
@@ -150,7 +110,7 @@
 	<meta name="theme-color" content="#444444">
 
 	<!-- Safari Pinned Tab Icon -->
-	<link rel="mask-icon" href="/path/to/icon.svg" color="blue">
+	<!-- <link rel="mask-icon" href="/path/to/icon.svg" color="blue"> -->
 
 
 
